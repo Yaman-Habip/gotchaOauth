@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title - Profile</title>
+        <%- include('components/stylesheet'); -%>
+    </head>
+    <body>
+        <%- include('components/nav'); -%>
+        <header>
+            <h1>Welcome to your profile, <%= user.name %></h1>
+        </header>
+        <main>
+            <h2>Details:</h2>
+            <%- include('components/profileForm'); -%>
+            <% if (error != null) { %> <div class="error"><p>Encountered Error: <%= error %> </p></div> <% } %>
+        </main>
+        <%- include('components/javascript'); -%>
+    </body>
+</html>
